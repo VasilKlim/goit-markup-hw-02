@@ -1,12 +1,13 @@
 :root {
   --primary-text-color: #212121;
   --secondery-text-color: #757575;
-  --hover-text-color: #2196f3;
+  --activ-text-color: #2196f3;
 }
 
 body {
   background-color: #e5e5e5;
   font-family: Roboto, sans-serif;
+  color: var(--primary-text-color);
 }
 
 .header {
@@ -24,7 +25,7 @@ body {
 }
 
 span {
-  color: var(--hover-text-color);
+  color: var(--activ-text-color);
 }
 
 .nav-link {
@@ -35,9 +36,15 @@ span {
   letter-spacing: 0.02em;
   text-decoration: none;
 }
-.nav-link:hover {
-  color: var(--hover-text-color);
-}
+
+.nav-link:hover,
+.header-mail:hover,
+.header-phone:hover,
+.nav-link:focus,
+.header-mail:focus,
+.header-phone:focus {
+    color: var(--activ-text-color);
+  }
 
 .header-phone,
 .header-mail {
@@ -57,13 +64,14 @@ span {
   letter-spacing: 0.03em;
 }
 
-.pfol-btn:hover {
+.pfol-btn:hover,
+.pfol-btn:focus {
   color: #ffffff;
-  background-color: var(--hover-text-color);
+  background-color: var(--activ-text-color);
 }
 
-.pfol-btn:focus {
-  border: 1px solid tomato;
+.pfol-btn{
+  cursor: pointer;
 }
 
 .images-title {
